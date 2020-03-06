@@ -1,0 +1,22 @@
+<package>
+  <description brief="dvo_core">
+
+     dvo_core
+
+  </description>
+  <author>Christian Kerl</author>
+  <license>GPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dvo_core</url>
+
+  
+  <rosdep name="eigen" />
+  <rosdep name="tbb" />
+  
+  <export>
+      <cpp cflags="`rosboost-cfg --cflags` -I${prefix}/include"
+        lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -ldvo_core"/>
+  </export>
+</package>
+
+
